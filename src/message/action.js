@@ -223,6 +223,18 @@ function SipPeers() {
 }
 
 /**
+ * SIPpeerstatus Action.
+ * @constructor
+ * @see Action(String)
+ * @see See <a href="https://wiki.asterisk.org/wiki/display/AST/Asterisk+11+ManagerAction_SIPpeerstatus">https://wiki.asterisk.org/wiki/display/AST/Asterisk+11+ManagerAction_SIPpeerstatus</a>.
+ * @augments Action
+ * @property {String} Peer SIP peer name
+ */
+function SIPpeerstatus() {
+	SIPpeerstatus.super_.call(this, 'SIPpeerstatus');
+}
+
+/**
  * AgentLogoff Action.
  * @constructor
  * @see Action(String)
@@ -1225,6 +1237,7 @@ util.inherits(Action, message.Message);
         SipShowRegistry,
         SipQualifyPeer,
         SipPeers,
+	SIPpeerstatus,
         AgentLogoff,
         Agents,
         AttendedTransfer,
